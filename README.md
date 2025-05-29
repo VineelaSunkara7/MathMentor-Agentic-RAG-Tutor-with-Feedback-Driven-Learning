@@ -54,39 +54,6 @@ Real-time answer generation and feedback capture
 
 <img width="208" alt="image" src="https://github.com/user-attachments/assets/1451f38f-c35c-43c2-9212-3968c05eb3fb" />
 
-### 📚 Knowledge Base
-
-Dataset: JEEBench (HuggingFace)
-
-Vector DB: Qdrant (with OpenAI Embeddings)
-
-Storage: Built with llama-index to persist embeddings and perform top-1 similarity search
-
-### 🌐 Web Search
-
-Uses Tavily API for fallback search when the KB doesn't contain a good match
-
-Fetched content is piped into GPT-4o for clean explanation
-
-### 🔐 Guardrails
-
-Input Guardrail (DSPy): Accepts only math-related academic questions
-
-Output Guardrail (DSPy): Blocks hallucinated or off-topic content
-
-### 👨‍🏫 Human-in-the-Loop Feedback
-
-Streamlit UI allows students to give 👍 / 👎 after seeing the answer
-
-Feedback is logged to a local JSON file for future improvement
-
-### 📊 Benchmarking
-
-Evaluated on 50 random JEEBench Math Questions
-
-Current Accuracy: 66%
-
-Benchmark results saved to: benchmark/results.csv
 
 ### 📦 How to Run
 
