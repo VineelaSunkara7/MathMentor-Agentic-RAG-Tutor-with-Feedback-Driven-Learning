@@ -1,6 +1,5 @@
 
 # Optional: For running in async contexts
-
 nest-asyncio
 openai==1.61.0
 llama-index==0.12.33
