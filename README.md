@@ -44,5 +44,6 @@ Real-time answer generation and feedback capture
 
 ### 🔁 System Architecture Overview
 
-![Arc](https://github.com/user-attachments/assets/467f3da0-f314-497b-af13-3ebb8a196339)
+<img width="208" alt="image" src="https://github.com/user-attachments/assets/1451f38f-c35c-43c2-9212-3968c05eb3fb" />
+
 
