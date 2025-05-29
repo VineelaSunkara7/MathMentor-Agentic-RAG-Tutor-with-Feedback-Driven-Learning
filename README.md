@@ -54,36 +54,38 @@ Real-time answer generation and feedback capture
 
 <img width="208" alt="image" src="https://github.com/user-attachments/assets/1451f38f-c35c-43c2-9212-3968c05eb3fb" />
 
-### 📦 How to Run
+### 📚 Knowledge Base
 
-1. Install Dependencies
+Dataset: JEEBench (HuggingFace)
 
-pip install -r requirements.txt
+Vector DB: Qdrant (with OpenAI Embeddings)
 
-2. Launch the App
+Storage: Built with llama-index to persist embeddings and perform top-1 similarity search
 
-streamlit run app/streamlit.py
+### 🌐 Web Search
 
-### 🧪 Example Use Cases
+Uses Tavily API for fallback search when the KB doesn't contain a good match
 
-JEE/NEET Math Preparation: Walk-through explanations for tough math questions
+Fetched content is piped into GPT-4o for clean explanation
 
-STEM Tutoring Agents: Ideal blueprint for domain-specific educational agents
+### 🔐 Guardrails
 
-Feedback-Driven AI: Demonstrates how human feedback enhances model utility over time
+Input Guardrail (DSPy): Accepts only math-related academic questions
 
-### 📚 Tech Stack
-Component	       Role
+Output Guardrail (DSPy): Blocks hallucinated or off-topic content
 
-Qdrant	         Vector similarity search for KB questions
+### 👨‍🏫 Human-in-the-Loop Feedback
 
-llama-index	     Embedding storage & retrieval orchestration
+Streamlit UI allows students to give 👍 / 👎 after seeing the answer
 
-GPT-4.1 / GPT-4o Language model for answer generation
+Feedback is logged to a local JSON file for future improvement
 
-Tavily API	     Web fallback for external knowledge
+### 📊 Benchmarking
 
-DSPy	           Input/output guardrail enforcement
+Evaluated on 50 random JEEBench Math Questions
 
-Streamlit	       Frontend UI for interaction & feedback
+Current Accuracy: 66%
+
+Benchmark results saved to: benchmark/results.csv
+
 
