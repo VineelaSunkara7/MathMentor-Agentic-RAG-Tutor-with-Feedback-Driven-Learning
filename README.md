@@ -88,4 +88,12 @@ Current Accuracy: 66%
 
 Benchmark results saved to: benchmark/results.csv
 
+### 📦 How to Run
 
+1. Install Dependencies
+
+   pip install -r requirements.txt
+   
+3. Launch the App
+
+   streamlit run app/streamlit.py
